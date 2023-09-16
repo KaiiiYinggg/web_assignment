@@ -1,0 +1,137 @@
+<!--
+   author :Loh xin ling
+   file:hb_member.html
+//-->
+
+<!DOCTYPE html>
+<html>
+<head>
+        <title>hey cookies! Join us</title>
+        <meta charset="utf-8"/>
+        <meta name="keywords" content="biscuit,hey"/>
+        <link href="hb_styleHT.css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <a href="hb_Home.html">
+    <img src="hey cookies.jpg" alt="heycookies"/>
+    </a>
+    <div class="nav">
+      <ul id="menu">
+        <li><a href="hb_Home.html" target="_self" style="text-shadow: -2px -2px 5px #ccdaf0;">Home</a></li>
+        <li><a href="hb_member.html" target="_self" style="text-shadow: -2px -2px 5px #ccdaf0;">Join us</a></li>
+        <li><a href="#">About <i class="fa fa-caret-down"></i></a>
+          <ul>
+           <li><a href="hb_Info.html" target="_self">info</a></li>
+           <li><a href="hb_location.html" target="_self">Location</a> </li>
+          </ul>
+       </li>
+        <li><a href="#">Menu <i class="fa fa-caret-down"></i></a>
+          <ul>
+            <li><a href="menu.html" target="_self">Menu</a></li>
+            <li><a href="bundle_menu.html" target="_self">Bundle Menu</a></li>
+            <li><a href="pro_menu.html" target="_self">Season Menu</a></li>
+         </ul>
+        </li>
+        <li><a href="#">Order <i class="fa fa-caret-down"></i></a>
+          <ul>
+             <li><a href="alacarte.html" target="_self">Alacarte Order</a></li>
+             <li><a href="bundle.html" target="_self">Bundle Order</a></li>
+             <li><a href="season.html" target="_self">Season Order</a></li>
+          </ul>
+        </li>
+        <li><a href="#">More <i class="fa fa-caret-down"></i></a>
+          <ul>
+             <li><a href="hb_feedback.html" target="_self">Feedback</a></li>
+             <li><a href="hb_faq.html" target="_self">FAQ</a> </li>
+          </ul>
+        </li>
+    </ul>
+    </div> 
+</header>
+
+      <h1 id="tmove">Join Us :</h1>
+      <hr>
+      <form name="membform" onsubmit="return validateForm()">
+      <legend><strong>Fill in to become a member:</strong></legend>
+        <fieldset>
+        <div>
+         <label for="fname">Full name :</label>
+         <input type="text" id="fname" name="fname" placeholder="XXX XXX XXXX" required /><br>
+        </div>
+        <div>
+         <label for="cusphone">Phone number :</label>
+         <input type="tel" id="cusphone" name="cusphone" placeholder="NNN-NNN NNNN" required /><br>
+        </div>
+        <div>
+         <label for="email">Email address : </label>
+         <input type="email" id="email" name="email" placeholder="XXX@Xmail.com" required /><br>
+        </div>
+        <div>
+         <label for="birthday">Birthday :</label>
+         <input type="date" id="birthday" name="birthday"><br><br>
+        </div>  <button id="a" type="submit" value="Submit">Submit</button>
+        </fieldset>
+       </form>
+       
+
+       <script>
+        function validateForm() {
+            var x = document.forms["membform"].value;
+            alert ("congratulation you are sucessful to become hey member!");
+        }
+        </script>
+  <br>
+  <form name="workform" onsubmit="return validateForm()">
+  <legend><strong>Fill in to become a part of us:</strong></legend>
+    <fieldset>
+      <div>
+     <label for="fname">Full name :</label>
+     <input type="text" id="fname" name="fname" placeholder="XXX XXX XXXX" required /><br>
+    </div>
+    <div>
+     <label for="cusphone">Phone number :</label>
+     <input type="tel" id="cusphone" name="cusphone" placeholder="NNN-NNN NNNN" required /><br>
+    </div>
+    <div>
+     <label for="email">Email adress :</label>
+     <input type="email" id="email" name="email" placeholder="XXX@Xmail.com" required /><br>
+    </div>
+    <div>
+     <label for="adress" style="float: left;">Home adress :</label>
+     <input type="text" id="home" name="adress" placeholder="full adress" required /><br>
+    </div>
+    <div>
+     <label for="birthday">Birthday :</label>
+     <input type="date" id="birthday" name="birthday"><br>
+    </div>
+  <div>
+     <label style="float: left;">Gender :</label>
+    <div class="ratio">
+     <label for="F">Female</label>
+     <input name="gender" id="F" value="yes" type="radio"/>
+     <label for="M">Male</label>
+     <input name="gender" id="M" value="no" type="radio"/>
+    </div>
+  </div>
+     <br>
+     <button id="a" type="submit" value="Submit">Submit</button>
+    </fieldset>
+   </form>
+
+   <script>
+    function validateForm() {
+        var x = document.forms["workform"].value;
+        alert ("Thanks for fill up we will inform you after this!");
+    }
+    </script>
+
+  <footer>
+  <hr id="horizon">
+  <i class="fa">&#xf095;</i> <a href="tel:+60182069979">phone :0123456789</a>
+  <a href="mailto:lohxl-wm22@student.tarc.edu.my">, mail :hey_cookies!</a>
+  </footer>
+</body>

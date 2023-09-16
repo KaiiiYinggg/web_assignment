@@ -1,0 +1,331 @@
+/* =============================================
+	author :Ong kai ying
+   file:season.css
+   =============================================
+*/
+
+@charset "utf-8";
+/* =============================================
+	style for all
+   =============================================
+*/
+html {
+	background-color: rgba(165, 148, 167, 0.95);
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+   font-size: 100%;
+}
+
+body {
+	   display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+		height: 100%;
+		padding-left: 3.55%;
+		padding-right: 3.55%;
+		min-height: 100%;
+	   background-color: rgba(113, 96, 83, 0.765);
+      line-height: 1.4;
+		box-shadow:0 50px 50px 0 rgba(0, 0, 0, 0.30);
+}
+
+header img{
+	width: 100%;
+	cursor: pointer;
+}
+
+.nav {
+   width: 100%;
+   background-color:  rgba(165, 148, 167, 0.95);
+   height: 70px;
+   border: 3px dotted;
+   border-radius: 3em;
+   display: flex;
+	-webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+	max-width: 100%;
+   overflow: hidden;
+   margin-top: 50px;
+}
+
+ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   position: absolute;
+}
+
+ul li {
+   float: left;
+   margin-top: 13px;
+   text-shadow: -2px -2px 5px #ccdaf0;
+}
+
+ul li a{
+   width: 150px;
+   display: block;
+   text-decoration: none;
+   font-size: 25px;
+   text-align: center;
+   padding: 5px;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ul li ul a:hover {
+   background-color: white;
+}
+
+ul li ul {
+   background-color: rgba(165, 148, 167, 0.9);
+}
+
+ul li ul li {
+   float: none;
+}
+
+ul li ul {
+   display: none;
+}
+
+ul li:hover ul {
+   display: block;
+}
+
+
+footer hr#horizon {
+	color: black;
+}
+
+footer {
+	text-align: center;
+	font-size: 1.2em;
+}
+
+  /* =============================================
+	style for Hypertext links
+   ===============================================
+*/
+a {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+a:hover {
+	color: rgb(57, 63, 95);
+}
+
+ /* =============================================
+	style for season
+   ==============================================
+*/
+form {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+ } 
+
+ fieldset#selectOder{
+    background-color:rgba(217, 211, 230);
+    -webkit-flex: 1 1 300px;
+    flex: 1 1 300px; 
+    margin: 10px;  
+    width: 45%;
+ }
+
+ fieldset#deliveryinfo,fieldset#pickupinfo,fieldset#method {
+   background-color:rgba(217, 211, 230);
+   -webkit-flex: 1 1 300px;
+   flex: 1 1 300px; 
+   margin: 5px;  
+
+}
+
+fieldset#oderinfo {
+   background-color:rgba(217, 211, 230);
+   -webkit-flex: 1 1 300px;
+   flex: 1 1 300px; 
+   margin: 10px;  
+
+}
+
+ div {
+    margin: 7px;
+    width: 110%;
+ }
+
+ legend {
+    margin: auto;
+    width: 60%;
+    height: 40px;
+    font-size: 1.6em;
+    font-weight: 1000;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    background-color: rgb(236, 201, 214);
+ }
+
+ legend#delivery,legend#pickup {
+    margin: auto;
+    width: 60%;
+    height: 40px;
+    font-size: 1.6em;
+    font-weight: 1000;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    background-color: rgb(241, 215, 229);
+ }
+ 
+ h1{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-size: 1.8em;
+   color: rgb(15, 26, 81);
+   text-shadow: -2px -2px 5px #ccdaf0;
+ }
+
+
+ label {
+    width: 120px;
+    font-weight: bold;
+ }
+
+ textarea {
+    display: block;
+    width: 70%;
+    height: 70px;
+    background-color: rgb(253, 240, 245);
+ }
+ 
+ fieldset#oderinfo label, fieldset#deliveryinfo label {
+    color:rgb(71, 68, 81);
+ }
+
+ fieldset#selectOder input {
+   width: 30px;
+ }
+
+input#nameBox{
+    margin-left: 70px;
+    background-color: rgb(253, 240, 245);
+}
+
+input#phoneBox{
+    margin-left: 67px;
+    background-color: rgb(253, 240, 245);
+}
+
+input#mailBox{
+    margin-left: 72px;
+    background-color: rgb(253, 240, 245);
+}
+
+input#quantityBox{
+    background-color: rgb(253, 240, 245);
+}
+
+
+input#street{
+    margin-left: 10px;
+    background-color: rgb(253, 240, 245);
+}
+
+input#post{
+    margin-left: 44px;
+    background-color: rgb(253, 240, 245);
+}
+
+input#cityname{
+    margin-left: 79px;
+    background-color: rgb(253, 240, 245);
+}
+
+input#delyBox{
+    margin-left: 21px;
+    background-color: rgb(253, 240, 245);
+}
+
+input#delytime{
+    margin-left: 19px;
+    background-color: rgb(253, 240, 245);
+}
+
+input[type="submit"] {
+    text-align: center;
+    width: 130px;
+    height: 30px;
+    background-color: rgb(210, 234, 237);
+ }
+
+ input[type="reset"] {
+   text-align: center;
+   width: 130px;
+   height: 30px;
+   background-color: rgb(210, 234, 237);
+}
+
+ img[src="Santas Cookies Box .jpg"] {
+    width: 130px;
+    height: 130px;
+ }
+
+ img[src="Sweet Treats Cookies Box.jpg"] {
+    width: 130px;
+    height: 170px;
+ }
+ img[src="Christmas Cookies Gift Box.jpg"] {
+    width: 120px;
+    height: 180px;
+ }
+ img[src="Value Christmas Cookies box.jpg"] {
+    width: 130px;
+    height: 150px;
+ }
+ img[src="Wonderful ChristmasTime.jpg"] {
+   width: 130px;
+   height: 190px;
+}
+ 
+select#qtt{
+   background-color: aliceblue;
+}
+
+img[src="cart2.png"] {
+   padding-left: 3px;
+   width: 25px;
+   height: 25px;
+}
+
+input#nameBox{
+   margin-left: 70px;
+   background-color: rgb(253, 240, 245);
+}
+
+input#phoneBox{
+   margin-left: 67px;
+   background-color: rgb(253, 240, 245);
+}
+
+input#mailBox{
+   margin-left: 72px;
+   background-color: rgb(253, 240, 245);
+}
+
+input#quantityBox{
+   margin-left: 53px;
+   background-color: rgb(253, 240, 245);
+}
+
+input#pickupdate{
+   margin-left: 28px;
+   background-color: rgb(253, 240, 245);
+}
+
+input#pickuptime{
+   margin-left: 25px;
+   background-color: rgb(253, 240, 245);
+}
+input#total1{
+   margin-left: 200px;
+   background-color: rgb(253, 240, 245);
+}
+

@@ -1,0 +1,442 @@
+<!--
+   author :Ong kai ying
+   file:alacarte.html
+//-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="biscuit,hey"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="alacart.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Hey Cookies! Alacarte Oder</title>
+
+        <script>
+        function selection_price(){
+        document.order.selection[0].checked
+           document.order.sub1.value="5.00";
+        }
+         function myFunction() {
+            alert("Oder Submited!");
+         }
+        </script>
+    </head>
+
+<body>
+   <header>
+      <a href="hb_Home.html">
+      <img src="hey cookies.jpg" alt="heycookies"/>
+      </a>
+      <div class="nav">
+         <ul>
+             <li><a href="hb_Home.html" target="_self" style="text-shadow: -2px -2px 5px #ccdaf0;">Home</a></li>
+             <li><a href="hb_member.html" target="_self" style="text-shadow: -2px -2px 5px #ccdaf0;">Join us</a></li>
+             <li><a href="#">About <i class="fa fa-caret-down"></i></a>
+               <ul>
+                <li><a href="hb_Info.html" target="_self">info</a></li>
+                <li><a href="hb_location.html" target="_self">Location</a></li>
+               </ul>
+            </li>
+             <li><a href="#">Menu <i class="fa fa-caret-down"></i></a>
+               <ul>
+                  <li><a href="menu.html" target="_self">Menu</a></li>
+                  <li><a href="bundle_menu.html" target="_self">Bundle Menu</a></li>
+                  <li><a href="pro_menu.html" target="_self">Season Menu</a></li>
+               </ul>
+            </li>
+             <li><a href="#">Order <i class="fa fa-caret-down"></i></a>
+               <ul>
+                  <li><a href="alacart.html" target="_self">Alacarte Order</a></li>
+                  <li><a href="bundle.html" target="_self">Bundle Order</a></li>
+                  <li><a href="season.html" target="_self">Season Order</a></li>
+               </ul>
+             </li>
+             <li><a href="#">More <i class="fa fa-caret-down"></i></a>
+               <ul>
+                 <li><a href="hb_feedback.html" target="_self">Feedback</a></li>
+                 <li><a href="hb_faq.html" target="_self">FAQ</a></li>
+               </ul>
+            </li>
+         </ul>
+      </div> 
+    
+  </header>
+
+    <selection>
+        <h1>Alacarte Oders</h1>
+        <fieldset id="oderinfo">
+          <legend>Alacarte Oders Info</legend>
+            <form name="order" method="post">
+            <div>
+                <label for="nameBox">Name : </label>
+                <input name="custName" id="nameBox" type="text" placeholder="Please enter your name" required/>
+             </div>
+             <div>
+                <label for="phoneBox">Phone : </label>
+                <input name="custPhone" id="phoneBox" type="tel" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" placeholder="Exp:012-345 6789"/>
+             </div>
+             <div>
+                <label for="mailBox">Email:</label>
+                <input type="email" name="mail" id="mailBox"required>
+             </div>
+             <fieldset id="selectOder">
+               <legend>Select Your Oder</legend>
+               <div>
+                  <input type="checkBox" name="vanilabis" id="bis"/><label for="bis">Vanila Biscuit</label><br/>
+                  <img src="vanila2.png" alt="Vanila Biscuit">
+                  <img src="cart2.png" alt="">
+                  <select name="quantity" id="qtty" onchange="calculate1(this.value)">
+                     <option value="Quantity">Quantity</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                     <option value="9">9</option>
+                     <option value="10">10</option>
+                  </select>
+                  <label>Total(RM)</label>
+                  <input class="total" name="tot1" id="tot1" type="text" readonly>
+                  <script>
+                     function calculate1(val){
+                         var tot_price = val * 8.00;
+                         var divobj = document.getElementById('tot1');
+                         divobj.value = tot_price;
+                     }
+                 </script>
+               </div>
+                <div>
+                  <input type="checkBox" name="commonbis" id="bis"/><label for="bis">Common Biscuit</label><br/>
+                  <img src="common.png" alt="Common Biscuit">                  
+                  <img src="cart2.png" alt="">
+                  <select name="quantity" id="qtty"onchange="calculate2(this.value)">
+                     <option value="Quantity">Quantity</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                     <option value="9">9</option>
+                     <option value="10">10</option>
+                  </select>
+                  <label>Total(RM)</label>
+                  <input class="total" name="tot2" id="tot2" type="text" readonly>
+                  <script>
+                     function calculate2(val){
+                         var tot_price = val * 8.00;
+                         var divobj = document.getElementById('tot2');
+                         divobj.value = tot_price;
+                     }
+                 </script>
+                </div>
+                
+                <div>
+                  <input type="checkBox" name="chocmilkbis" id="bis"/><label for="bis">Chocolate Milk Biscuit</label><br/>
+                  <img src="chocmilk.png" alt="Chocolate Milk Biscuit">
+                  <img src="cart2.png" alt="">
+                  <select name="quantity" id="qtty" onchange="calculate3(this.value)">
+                     <option value="Quantity">Quantity</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                     <option value="9">9</option>
+                     <option value="10">10</option>
+                  </select>
+                  <label>Total(RM)</label>
+                  <input class="total" name="tot3" id="tot3" type="text" readonly>
+                  <script>
+                     function calculate3(val){
+                         var tot_price = val * 8.00;
+                         var divobj = document.getElementById('tot3');
+                         divobj.value = tot_price;
+                     }
+                 </script>
+                </div>
+                <div>
+                  <input type="checkBox" name="butterbis" id="bis"/><label for="bis">Butter Biscuit</label><br/>
+                  <img src="butter.png" alt="Butter Biscuit">
+                  <img src="cart2.png" alt="">
+                  <select name="quantity" id="qtty" onchange="calculate4(this.value)">
+                     <option value="Quantity">Quantity</option>
+                     <option value="1">1</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                     <option value="9">9</option>
+                     <option value="10">10</option>
+                  </select>
+                  <label>Total(RM)</label>
+                  <input class="total" name="tot4" id="tot4" type="text" readonly>
+                  <script>
+                     function calculate4(val){
+                         var tot_price = val * 8.50;
+                         var divobj = document.getElementById('tot4');
+                         divobj.value = tot_price;
+                     }
+                 </script>
+                </div>
+                  <div>
+                     <input type="checkBox" name="chocbutterbis" id="bis"/><label for="bis">Chocolate Butter Biscuit</label><br/>
+                     <img src="chocbutter.png" alt=" Chocolate Butter Biscuit">
+                     <img src="cart2.png" alt="">
+                     <select name="quantity" id="qtt" onchange="calculate5(this.value)">
+                        <option value="Quantity">Quantity</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                     </select>
+                     <label>Total(RM)</label>
+                     <input class="total" name="tot5" id="tot5" type="text" readonly>
+                     <script>
+                        function calculate5(val){
+                            var tot_price = val * 8.50;
+                            var divobj = document.getElementById('tot5');
+                            divobj.value = tot_price;
+                        }
+                    </script>
+                   </div>
+                <div>
+                  <input type="checkBox" name="crispybis" id="bis"/><label for="bis">Crispy Biscuit</label><br/>
+                  <img src="crispy.png" alt="Crispy Biscuit">                  
+                  <img src="cart2.png" alt="">
+                  <select name="quantity" id="qtt" onchange="calculate6(this.value)">
+                     <option value="Quantity">Quantity</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                     <option value="9">9</option>
+                     <option value="10">10</option>
+                  </select>
+                  <label>Total(RM)</label>
+                  <input class="total" name="tot6" id="tot6" type="text" readonly>
+                  <script>
+                     function calculate6(val){
+                         var tot_price = val * 9.00;
+                         var divobj = document.getElementById('tot6');
+                         divobj.value = tot_price;
+                     }
+                 </script>
+                </div>
+                <div>
+                  <input type="checkBox" name="whitechocbis" id="bis"/><label for="bis">White Chocolate Biscuit</label><br/>
+                  <img src="whitechoc.png" alt="White Chocolate Biscuit">
+                  <img src="cart2.png" alt="">
+                  <select name="quantity" id="qtt" onchange="calculate7(this.value)">
+                     <option value="Quantity">Quantity</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                     <option value="9">9</option>
+                     <option value="10">10</option>
+                  </select>
+                  <label>Total(RM)</label>
+                  <input class="total" name="tot7" id="tot7" type="text" readonly>
+                  <script>
+                     function calculate7(val){
+                         var tot_price = val * 9.00;
+                         var divobj = document.getElementById('tot7');
+                         divobj.value = tot_price;
+                     }
+                 </script>
+                 </div>
+                <div>
+                  <input type="checkBox" name="coffeebutterbis" id="bis"/><label for="bis">Coffee Butter Biscuit</label><br/>
+                  <img src="coffeebutter.png" alt="Coffee Butter Biscuit">                  
+                  <img src="cart2.png" alt="">
+                  <select name="quantity" id="qtt" onchange="calculate8(this.value)">
+                     <option value="Quantity">Quantity</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                     <option value="9">9</option>
+                     <option value="10">10</option>
+                  </select>
+                  <label>Total(RM)</label>
+                  <input class="total" name="tot8" id="tot8" type="text" readonly>
+                  <script>
+                     function calculate8(val){
+                         var tot_price = val * 9.00;
+                         var divobj = document.getElementById('tot8');
+                         divobj.value = tot_price;
+                     }
+                 </script>
+                </div>
+                <div>
+                  <input type="checkBox" name="sugarcoffeebis" id="bis"/><label for="bis">Sugar Coffee Biscuit</label><br/>
+                  <img src="sugarcofee.png" alt="Sugar Coffee Biscuit">
+                  <img src="cart2.png" alt="">
+                  <select name="quantity" id="qtt" onchange="calculate9(this.value)">
+                     <option value="Quantity">Quantity</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                     <option value="9">9</option>
+                     <option value="10">10</option>
+                  </select>
+                  <label>Total(RM)</label>
+                  <input class="total" name="tot9" id="tot9" type="text" readonly>
+                  <script>
+                     function calculate9(val){
+                         var tot_price = val * 10.00;
+                         var divobj = document.getElementById('tot9');
+                         divobj.value = tot_price;
+                     }
+                 </script>
+                  </div>
+                <div>
+                  <input type="checkBox" name="sugarchocbis" id="bis"/><label for="bis">Sugar Chocolate Biscuit</label><br/>
+                  <img src="sugarchoc.png" alt="Sugar Chocolate Biscuit">
+                  <img src="cart2.png" alt="">
+                  <select name="quantity" id="qtt" onchange="calculate10(this.value)">
+                     <option value="Quantity">Quantity</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                     <option value="9">9</option>
+                     <option value="10">10</option>
+                  </select>
+                  <label>Total(RM)</label>
+                  <input class="total" name="tot10" id="tot10" type="text" readonly>
+                  <script>
+                     function calculate10(val){
+                         var tot_price = val * 10.00;
+                         var divobj = document.getElementById('tot10');
+                         divobj.value = tot_price;
+                     }
+                 </script>
+                </div>
+             <div>
+               <label for="remarkBox">Remark:</label>
+               <textarea name="remark" id="remarkBox"></textarea>
+            </div>
+            <div>
+               <h2>Choose Method(fill in info at Method)</h2>
+               <input type="radio" name="selection" value="5" onclick="selection_price()"/>
+                <b>Delivery(RM)</b>
+               <input class="numbers" id="total1" name="sub1" size="7" value="5.00"/>
+            </div>
+
+            <div>
+               <h2>Choose payment method </h2>
+               <input type="radio" name="onlinebank" id="onlinebank">Cash on Delivery<br/>
+               <input type="radio" name="onlinebank" id="onlinebank">Online Banking
+               <select>
+                  <option>Select Bank</option>
+                  <option>Maybank2u</option>
+                  <option>CIMB</option>
+                  <option>Public Bank</option>
+                  <option>Hong Leong</option>
+                  <option>RHB</option>
+                  <option>HSBC</option>
+                  <option>OCBC</option>
+                  <option>Alliance Bank</option>
+               </select>
+            </div>
+         </fieldset>
+
+         <fieldset id="method">
+            <legend>Method</legend>
+            <fieldset id="deliveryinfo">
+            <legend id="delivery">Delivery Info</legend>
+            <div>
+                <label for="addressBox">Delivery Address*</label><br/>
+               <div>
+                <label for="street">Stress Address:</label>
+                <input type="text" name="streetaddress" id="street"  required/><br/>
+               </div>
+               <div>
+                <label for="post">Post code:</label>
+                <input type="text" name="postcode" id="post" maxlength="6" required/><br/>
+               </div>
+               <div>
+                <label for="cityname">City:</label>
+                <input type="text" name="city" id="cityname" required/><br/><br/>
+               </div>
+            </div>
+            <div>
+                <label for="delyBox">Delivery Date:</label>
+                <input name="delydate" id="delyBox" type="date"/>
+            </div>
+            <div>
+               <label for="delytime">Delivery Time:</label>
+               <input name="delyt" id="delytime" type="Time"/>
+               <p><i>*Our shop will open from 8:00am to 5:00pm, please select our opening time.*</i></p>
+           </div>
+        </fieldset>
+
+    <fieldset id="pickupinfo">
+        <legend id="pickup">Pickup Info</legend>
+        <div>
+           <label for="pickupdate">Pickup Date:</label>
+           <input name="pickup" id="pickupdate" type="date"/>
+        </div>
+        <div>
+           <label for="pickuptime">Pickup Time:</label>
+           <input name="pickupt" id="pickuptime" type="Time"/>
+           <p><i>*Our shop will open from 8:00am to 5:00pm, please select our opening time.*</i></p>
+        </div>
+        </fieldset>
+</fieldset>
+        <div>
+         <input type="submit" onclick="myFunction()" value="Confirm Oder"/>
+         <input type="reset" value="Clear Form"/>
+        </div>
+         </form>
+         </fieldset>
+    </selection>
+
+    <footer>
+      <hr id="horizon">
+      <i class="fa">&#xf095;</i> <a href="tel:+60182069979">phone :0123456789</a>
+      <a href="mailto:lohxl-wm22@student.tarc.edu.my">, mail :hey_cookies!</a>
+    </footer>
+</body>
+</html>

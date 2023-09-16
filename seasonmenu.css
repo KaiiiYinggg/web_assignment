@@ -1,0 +1,177 @@
+/* =============================================
+	author: Phuah du cheng
+	file :promotion.css
+     css for file:pro_menu.html
+   =============================================
+*/
+
+@charset "utf-8";
+
+/* =============================================
+	style for all
+   =============================================
+*/
+html {
+   font-size: 100%;
+	background-color: rgba(165, 148, 167, 0.95);
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+ }
+ 
+ body {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	height: 100%;
+	padding-left: 3.55%;
+	padding-right: 3.55%;
+	min-height: 100%;
+	background-color: rgba(113, 96, 83, 0.765);
+	font-size: 1.8em;
+	line-height: 1.4;
+	box-shadow:0 50px 50px 0 rgba(0, 0, 0, 0.30);
+}
+
+header img{
+	width: 100%;
+	cursor: pointer;
+}
+
+#menu, #menu ul {
+     margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#menu {
+   width: 100%;
+   margin: 50px auto;
+   background-color:  rgba(165, 148, 167, 0.95);
+   border-radius: 3em;
+   border: dotted 3px;
+   font-size: 0.93em;
+}
+
+#menu:before,
+#menu:after {
+	content:'';
+	display: table;
+}
+
+#menu:after {
+	clear: both;
+}
+
+#menu li {
+    float: left;
+    position: relative;
+}
+
+#menu a{
+	float: left;
+	padding: 12px 30px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-shadow: -2px -2px 5px #ccdaf0;
+}
+
+#menu ul {
+	margin: 20px 0 0 0;
+	opacity: 0;
+	visibility: hidden;
+	position:absolute;
+	top: 46px;
+	left: 0;
+	z-index: 1;
+	background-color:  rgba(165, 148, 167, 0.95);
+	
+}
+
+#menu li:hover > ul{
+	opacity: 1;
+	visibility: visible;
+	margin: 0;
+	
+}
+
+#menu ul ul{
+	top: 0;
+	left: 150px;
+	margin: 0 0 0 20px;
+}
+
+#menu ul li {
+	float: none;
+	display: block;
+}
+
+#menu ul a {
+	padding: 10px;
+	width: 150px;
+	display: block;
+
+	float: none;
+	text-transform: uppercase;
+	word-wrap: break-word;
+
+}
+
+#menu ul a:hover {
+	background-color: white;
+	opacity: 0.8;
+}
+
+footer hr#horizon {
+	color: black;
+}
+
+footer {
+	text-align: center;
+	font-size: 0.7em;
+}
+
+/* =============================================
+	style for Hypertext links
+   =============================================
+*/
+
+a {
+	color: rgb(0, 0, 0);
+}
+
+a:hover {
+	color: rgb(57, 63, 95);
+}
+
+ /* =============================================
+	style for promotion menu body part
+   =============================================
+*/
+ p{
+   font-size: 25px;
+}
+
+header div.ti {
+    padding-left: 50px;
+    font-size: x-large;
+ }
+article {
+ background-color:rgba(113, 96, 83, 0.765);
+ font-size: larger;
+ color: black;
+ border:2px solid black;
+ margin: 40px;
+ padding-left: 40px;
+ padding-bottom: 40px;
+ padding-right: 40px;
+ }
+
+ article img {
+    width:190px;
+    height:190px;
+    float:left;
+    border: 2px solid;
+ }
+
+ 
